@@ -1,0 +1,17 @@
+<html ng-app>
+<head>
+	<title>Your Shopping Bag</title>
+	<meta charset="utf-8"> 
+</head>
+<body ng-controller="ChartController">
+	<h1>Your Shopping bag</h1>
+	<div ng-repeat="item in items">
+		<span>{{item.title}}</span>
+		<input ng-model="item.quantity">
+		<span>{{item.price * item.quantity | currency}}</span>
+		<button ng-click="remove($index)">remove</button>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
