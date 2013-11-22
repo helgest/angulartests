@@ -7,7 +7,9 @@
 	<form ng-controller="StartupController">
 		Starting: <input ng-model="funding.startingEstimate">
 		Recommendation: {{funding.needed}}
+		<button ng-click="reset()">Reset</button>
 	</form>
+
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
 <script src="main.js"></script>
 </body>

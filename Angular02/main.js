@@ -6,4 +6,8 @@ function StartupController($scope){
 	};
 
 	$scope.$watch('funding.startingEstimate', computeNeeded);
+
+	$scope.reset = function() {
+		$scope.funding.startingEstimate = 0;
+	};
 }
