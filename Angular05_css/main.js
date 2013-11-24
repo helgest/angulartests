@@ -1,10 +1,17 @@
 function myController($scope){
 	
-	$scope.redlight=true;
-	$scope.greenlight=false;
+	$scope.isError=false;
+	$scope.isWarning=false;
 
-	$scope.change = function() {
-		$scope.redlight=!$scope.redlight;
-		$scope.greenlight=!$scope.greenlight;
+	$scope.showError = function() {
+		$scope.isError=true;
+		$scope.isWarning=false;
+		$scope.messageText='This is an error';
+	};
+
+	$scope.showWarning = function() {
+		$scope.isError=false;
+		$scope.isWarning=true;
+		$scope.messageText='This is a warning';
 	};
 };

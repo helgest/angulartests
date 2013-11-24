@@ -2,12 +2,16 @@
 <head>
 	<title>Hide</title>
 	<meta charset="utf-8"> 
+	<style type="text/css">
+		.error{background:red;display:block;}
+		.warning{background: yellow;display:block;}
+	</style>
 </head>
 <body>
 	<div ng-controller="myController">
-		<div ng-show="redlight" style="background:red;display:block;">.</div>
-		<div ng-show="greenlight" style="background:green;display:block;">.</div>
-		<button ng-click="change()">Change</button>
+		<div ng-class="{error:isError, warning:isWarning}">{{messageText}}</div>
+		<button ng-click="showError()">error</button>
+		<button ng-click="showWarning()">warning</button>
 	</div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
 <script src="main.js"></script>
