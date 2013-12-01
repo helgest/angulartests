@@ -1,0 +1,19 @@
+<html ng-app='ShoppingModule'>
+<head>
+	<title>Module</title>
+	<meta charset="utf-8"> 
+</head>
+<body ng-controller="ShoppingController">
+	<h1>Your Shopping bag</h1>
+	<table>
+		<tr ng-repeat="item in items">
+			<td>{{item.title}}</td>
+			<td>{{item.description}}</td>
+			<td>{{item.price}}</td>
+		</tr>	
+	</table>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
