@@ -1,0 +1,27 @@
+<html ng-app>
+<head>
+	<title>SVG Angular</title>
+	<meta charset="utf-8"> 
+</head>
+<body>
+	<div ng-controller="AlbumController">
+	<svg width="300" height="300" viewBox="0 0 300 300" preserveAspectRatio="meet meet">
+
+	    	<circle ng-repeat="circle in circles" 
+	    		cx="{{circle.x}}" 
+	    		cy="{{circle.y}}" 
+	    		r="{{scaleSmall}}">
+	    	</circle>
+	</svg>
+	<input 
+                type="range" 
+                min=10 
+                max=100 
+                step=0.01 
+                ng-model="scaleSmall"
+        />
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
