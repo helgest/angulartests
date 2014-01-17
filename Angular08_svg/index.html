@@ -14,6 +14,19 @@
 			-webkit-transform: scale(.3);
 			transform: scale(.3);
 		}
+		#rocket {
+		    -webkit-animation: play 6s infinite linear;
+		            animation: play 6s infinite linear;
+		}
+
+		@-webkit-keyframes play {
+		   from { -webkit-transform: translate(100px,100px) scale(.1) rotate(360deg); }
+		     to { -webkit-transform: translate(100px,100px) scale(.1) rotate(0deg); }
+		}
+		@keyframes play {
+		   from { transform: translate(100px,100px) scale(.1) rotate(360deg); }
+		     to { transform: translate(100px,100px) scale(.1) rotate(0deg); }
+		}
 	</style> 
 </head>
 <body>
